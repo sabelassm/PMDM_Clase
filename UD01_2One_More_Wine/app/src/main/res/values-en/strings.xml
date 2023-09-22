@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UD01_2One_More_Wine</string>
+    <string name="list_wines">Wine List</string>
+    <string name="search">Search</string>
+    <string-array name="list_type_wines">
+        <item>White</item>
+        <item>Red</item>
+        <item>Rose</item>
+    </string-array>
+</resources>

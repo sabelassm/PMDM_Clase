@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">UD01_2One_More_Wine</string>
+    <string name="list_wines">Lista de Vinos</string>
+    <string name="search">Buscar</string>
+    <string-array name="list_type_wines">
+        <item>Blanco</item>
+        <item>Tinto</item>
+        <item>Rosado</item>
+    </string-array>
 </resources>
