@@ -61,4 +61,38 @@ class MainActivity : AppCompatActivity() {
         outState.putLong(BASE_KEY, chrono.base)
         super.onSaveInstanceState(outState)
     }
+
+    override fun onStop() {
+        stopChrono()
+        super.onStop()
+    }
+
+    override fun onRestart() {
+        startChrono()
+        super.onRestart()
+    }
+
+    override fun onPause() {
+        stopChrono()
+        super.onPause()
+    }
+
+    override fun onResume() {
+        startChrono()
+        super.onResume()
+    }
+
+    fun startChrono(){
+        if(running){
+            chrono.base = SystemClock.elapsedRealtime() - offset
+            chrono.start()
+        }
+    }
+
+    fun stopChrono(){
+        if(running){
+            offset = SystemClock.elapsedRealtime() - chrono.base
+            chrono.stop()
+        }
+    }
 }
