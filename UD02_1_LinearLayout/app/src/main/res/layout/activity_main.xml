@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:padding="16dp"
+
+    >
+    <EditText
+        android:id="@+id/textTo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="@string/to"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:id="@+id/subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:hint="@string/subject"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:gravity="top"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/send"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="end"
+
+        />
+
+
+</LinearLayout>

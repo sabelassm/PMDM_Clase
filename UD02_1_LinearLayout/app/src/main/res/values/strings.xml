@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">UD02_1_LinearLayout</string>
+    <string name="to">A:</string>
+    <string name="subject">Asunto</string>
+    <string name="send">Enviar</string>
+
+</resources>
