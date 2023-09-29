@@ -63,36 +63,36 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onStop() {
-        stopChrono()
-        super.onStop()
-    }
-
-    override fun onRestart() {
-        startChrono()
-        super.onRestart()
-    }
-
-    override fun onPause() {
-        stopChrono()
-        super.onPause()
-    }
-
-    override fun onResume() {
-        startChrono()
-        super.onResume()
-    }
-
-    fun startChrono(){
-        if(running){
-            chrono.base = SystemClock.elapsedRealtime() - offset
-            chrono.start()
-        }
-    }
-
-    fun stopChrono(){
         if(running){
             offset = SystemClock.elapsedRealtime() - chrono.base
             chrono.stop()
         }
+        super.onStop()
     }
+
+    override fun onRestart() {
+        if(running){
+            chrono.base = SystemClock.elapsedRealtime() - offset
+            chrono.start()
+        }
+        super.onRestart()
+    }
+
+    override fun onPause() {
+        if(running){
+            offset = SystemClock.elapsedRealtime() - chrono.base
+            chrono.stop()
+        }
+        super.onPause()
+    }
+
+    override fun onResume() {
+        if(running){
+            chrono.base = SystemClock.elapsedRealtime() - offset
+            chrono.start()
+        }
+        super.onResume()
+    }
+
+
 }
