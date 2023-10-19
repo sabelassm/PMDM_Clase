@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UD1_UD03_SecretApp</string>
+    <string name="welcome_text">¡Bienvenido a la aplicación Secret Message! Usa esta app para encriptar un mensaje secreto.</string>
+    <string name="start">Inicio</string>
+    <string name="next">Siguiente</string>
+    <string name="encrypt_text">¡Aquí está tu mensaje encriptado!</string>
+    <string name="message_text">Por favor, introduce tu mensaje</string>
+</resources>

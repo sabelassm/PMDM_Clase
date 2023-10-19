@@ -8,20 +8,21 @@
     android:orientation="vertical"
     android:gravity="center_horizontal" >
 
-    <EditText
-        android:id="@+id/edit_text"
+    <TextView
+        android:id="@+id/encrypt_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
         android:textSize="20sp"
         android:layout_margin="20dp"
-        android:hint="@string/message_text"
-        android:inputType="textMultiLine" />
+        android:text="@string/encrypt_text" />
 
-    <Button
-        android:id="@+id/button_nect"
-        android:layout_width="wrap_content"
-        android:layout_marginTop="32dp"
+    <TextView
+        android:id="@+id/encrypt_textValue"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/next" />
+        android:gravity="center_horizontal"
+        android:textSize="20sp"
+        android:layout_margin="20dp" />
 
 </LinearLayout>
