@@ -15,5 +15,17 @@
     <fragment
         android:id="@+id/messageFragment"
         android:name="com.example.ud03_1_secretapp.MessageFragment"
-        android:label="MessageFragment" />
+        android:label="MessageFragment" >
+        <action
+            android:id="@+id/action_messageFragment_to_encryptFragment"
+            app:destination="@id/encryptFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/encryptFragment"
+        android:name="com.example.ud03_1_secretapp.EncryptFragment"
+        android:label="EncryptFragment" >
+        <argument
+            android:name="message"
+            app:argType="string" />
+    </fragment>
 </navigation>

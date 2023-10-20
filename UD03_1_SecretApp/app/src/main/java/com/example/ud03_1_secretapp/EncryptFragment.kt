@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 
 class EncryptFragment : Fragment() {
 
@@ -13,7 +14,14 @@ class EncryptFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_encrypt, container, false)
+        val message = EncryptFragmentArgs.fromBundle(requireArguments()).message
+        val view = inflater.inflate(R.layout.fragment_encrypt, container, false)
+        view.findViewById<TextView>(R.id.encrypt_textValue).text = message
+        return view
+    }
+
+    fun cifrado(message: String) = message.map {
+
     }
 
 }
