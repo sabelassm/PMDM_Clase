@@ -13,6 +13,7 @@ import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,18 +27,20 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
 
-        //Configuración de la barra de navegación
-        val builderApp = AppBarConfiguration.Builder(navController.graph)
-        val appBarConfiguration = builderApp.build()
-
-        toolbar.setupWithNavController(navController, appBarConfiguration)
-        val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-        bottomNav.setupWithNavController(navController)
-
-        //Panel Lateral
+        //Panel Lateral - Referencia Drawer Layout
         val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
         val builder = AppBarConfiguration.Builder(navController.graph)
         builder.setOpenableLayout(drawerLayout)
+
+        val appBarConfiguration = builder.build()
+        toolbar.setupWithNavController(navController, appBarConfiguration)
+
+        //Configuración de la barra de navegación
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        bottomNav.setupWithNavController(navController)
+
+        val navigationView = findViewById<NavigationView>(R.id.nav_view)
+        navigationView.setupWithNavController(navController)
 
     }
 
