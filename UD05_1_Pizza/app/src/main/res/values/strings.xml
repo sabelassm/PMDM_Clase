@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">UD05_1_Pizza</string>
+    <string name="app_name">Pizza</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="order_question">Selecciona tu tipo de pizza: </string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
